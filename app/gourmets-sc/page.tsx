@@ -8,7 +8,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 async function fetchShops(keyword?: string): Promise<Shop[]> {
   const query = new URLSearchParams();
   if (keyword) query.set("keyword", keyword);
-  const test = "aaaaaaa";
   try {
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_HOST}/api/shops?${query.toString()}`,
